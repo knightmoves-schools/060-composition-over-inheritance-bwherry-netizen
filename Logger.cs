@@ -7,7 +7,7 @@ public class Logger{
         Messages = new List<string>();
     }
 
-    public void Log(string message){
+    public void Log(string message, Logger Log){
         Messages.Add(message);
     }
 }
