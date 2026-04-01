@@ -1,16 +1,16 @@
 namespace knightmoves;
 
-public class SomeClass
+public class Logger
 {
-    private readonly Logger _logger;
+    public List<string> Messages { get; }
 
-    public SomeClass(Logger logger)
+    public Logger()
     {
-        _logger = logger;
+        Messages = new List<string>();
     }
 
-    public void DoSomething(string message)
+    public void Log(string message)
     {
-        _logger.Log(message);
+        Messages.Add(message);
     }
 }
