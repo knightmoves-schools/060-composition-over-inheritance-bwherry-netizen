@@ -1,16 +1,16 @@
 namespace knightmoves;
 
-public class ShoppingCart
+public class Logger
 {
-    private readonly Logger _logger;
+    public List<string> Messages { get; }
 
-    public ShoppingCart(Logger logger)
+    public Logger()
     {
-        _logger = logger;
+        Messages = new List<string>();
     }
 
-    public void AddItem(string item)
+    public void Log(string message)
     {
-        _logger.Log(item);
+        Messages.Add(message);
     }
 }
